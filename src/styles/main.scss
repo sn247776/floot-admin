@@ -1,0 +1,52 @@
+.auth {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  background: linear-gradient(
+    180deg,
+    #054b91 0%,
+    #2d99c7 43.23%,
+    #39b0d7 56.42%,
+    #3db9dd 61.1%,
+    #3ebade 61.11%,
+    #41c0e2 64.24%,
+    #31bdde 71.01%,
+    #31bede 71.02%,
+    #32c1e0 81.94%,
+    #3bb8e4 86.98%,
+    #53a0ec 100%
+  );
+
+  >img{
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+  }
+}
+
+
+.authbox{
+    width: 656px;
+    min-height: 450px;
+    padding: 2rem;
+    padding-bottom: 5rem;
+    border-radius: 20px;
+    position: relative;
+
+
+    h2{
+        font-size: 35px;
+        font-weight: 700;
+    }
+}
+
+.button-auth{
+    position: absolute;
+    padding: 0 2rem;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+
+}
