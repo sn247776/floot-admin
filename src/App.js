@@ -45,57 +45,61 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Toaster position="bottom-left" reverseOrder={false} />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <ProtectedRoute
-                isAuthenticated={isAuthenticated}
-                redirect="/login"
-              >
-                <Home />
-              </ProtectedRoute>
-            }
-          />
-           <Route
-            path="/games"
-            element={
-              <ProtectedRoute
-                isAuthenticated={isAuthenticated}
-                redirect="/login"
-              >
-                <Games />
-              </ProtectedRoute>
-            }
-          />
-           <Route
-            path="/request"
-            element={
-              <ProtectedRoute
-                isAuthenticated={isAuthenticated}
-                redirect="/login"
-              >
-                <Request />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/login"
-            element={
-              <ProtectedRoute isAuthenticated={!isAuthenticated} redirect="/">
-                <Login />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/signup"
-            element={
-              <ProtectedRoute isAuthenticated={!isAuthenticated} redirect="/">
-                <SignUP />
-              </ProtectedRoute>
-            }
-          />
-        </Routes>
+        {loading ? (
+          <div>Loading...</div>
+        ) : (
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <ProtectedRoute
+                  isAuthenticated={isAuthenticated}
+                  redirect="/login"
+                >
+                  <Home />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/games"
+              element={
+                <ProtectedRoute
+                  isAuthenticated={isAuthenticated}
+                  redirect="/login"
+                >
+                  <Games />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/request"
+              element={
+                <ProtectedRoute
+                  isAuthenticated={isAuthenticated}
+                  redirect="/login"
+                >
+                  <Request />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/login"
+              element={
+                <ProtectedRoute isAuthenticated={!isAuthenticated} redirect="/">
+                  <Login />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/signup"
+              element={
+                <ProtectedRoute isAuthenticated={!isAuthenticated} redirect="/">
+                  <SignUP />
+                </ProtectedRoute>
+              }
+            />
+          </Routes>
+        )}
       </ThemeProvider>
     </ColorModeContext.Provider>
   );
