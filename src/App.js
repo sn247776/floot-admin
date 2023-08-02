@@ -12,6 +12,7 @@ import Home from "./pages/Home";
 import { Toaster, toast } from "react-hot-toast";
 import Games from "./pages/Games";
 import Request from "./pages/Request";
+import Loading from "./components/Dashboard/Loading";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -46,7 +47,7 @@ function App() {
         <CssBaseline />
         <Toaster position="bottom-left" reverseOrder={false} />
         {loading ? (
-          <div>Loading...</div>
+          <Loading/>
         ) : (
           <Routes>
             <Route
