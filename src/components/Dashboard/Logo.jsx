@@ -11,7 +11,7 @@ function Logo() {
         noWrap
         sx={{ flexGrow: 1 }}
       >
-        Sagar
+        <h2>F Admin</h2>
       </Typography>
 
     </Box>

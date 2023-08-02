@@ -10,6 +10,8 @@ import Login from "./pages/auth/login";
 import SignUP from "./pages/auth/signup";
 import Home from "./pages/Home";
 import { Toaster, toast } from "react-hot-toast";
+import Games from "./pages/Games";
+import Request from "./pages/Request";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -52,6 +54,28 @@ function App() {
                 redirect="/login"
               >
                 <Home />
+              </ProtectedRoute>
+            }
+          />
+           <Route
+            path="/games"
+            element={
+              <ProtectedRoute
+                isAuthenticated={isAuthenticated}
+                redirect="/login"
+              >
+                <Games />
+              </ProtectedRoute>
+            }
+          />
+           <Route
+            path="/request"
+            element={
+              <ProtectedRoute
+                isAuthenticated={isAuthenticated}
+                redirect="/login"
+              >
+                <Request />
               </ProtectedRoute>
             }
           />

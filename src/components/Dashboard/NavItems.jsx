@@ -20,9 +20,9 @@ const menuItems = [
   { icon: <DashboardIcon />, text: 'Dashboard', link: '/' },
   { icon: <GamesIcon />, text: 'Games', link: '/games' },
   { icon: <AssignmentIcon />, text: 'Request', link: '/request' },
-  { icon: <PeopleIcon />, text: 'Users', link: '/users' },
-  { icon: <BarChartIcon />, text: 'Publishers ', link: '/publishers ' },
-  { icon: <LayersIcon />, text: 'Comments', link: '/comments' },
+  // { icon: <PeopleIcon />, text: 'Users', link: '/users' },
+  // { icon: <BarChartIcon />, text: 'Publishers ', link: '/publishers ' },
+  // { icon: <LayersIcon />, text: 'Comments', link: '/comments' },
 ];
 
 const savedReports = [
@@ -61,8 +61,8 @@ function NavItems() {
           </ListItemButton>
         ))}
         <Divider sx={{ my: 1 }} />
-        <ListSubheader inset>Saved reports</ListSubheader>
-        {savedReports.map((item, index) => (
+        {/* <ListSubheader inset>Saved reports</ListSubheader> */}
+        {/* {savedReports.map((item, index) => (
           <ListItemButton
             key={index}
             component={NavLink}
@@ -72,7 +72,7 @@ function NavItems() {
             <ListItemIcon>{item.icon}</ListItemIcon>
             <ListItemText primary={item.text} />
           </ListItemButton>
-        ))}
+        ))} */}
       </List>
     </Box>
   );
